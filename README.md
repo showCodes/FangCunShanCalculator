@@ -1,0 +1,2 @@
+# FangCunShanCalculator
+某游戏某玩法的计算器，主要用于学习GitHub的使用

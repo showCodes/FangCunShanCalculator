@@ -4,7 +4,7 @@ public class Client {
 
     public static void main(String[] args) throws ScriptException {
 
-        CalcData calcData = new CalcData();
-        calcData.printResults();
+        Calculator calculator = new Calculator();
+        calculator.printResults();
     }
 }

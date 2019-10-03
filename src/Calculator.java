@@ -7,14 +7,33 @@ import java.util.Iterator;
 
 public class Calculator {
 
+    // 更新分数
+    public static final double ADD_MAX_SCORE = 1500.0;
+    public static final double ADD_MIN_SCORE = 871.0;
+
+    public static final double MIN_MAX_SCORE = 10;
+    public static final double MIN_MIN_SCORE = 24;
+
+    public static final double MUL_MAX_SCORE = 0.0;
+    public static final double MUL_MIN_SCORE = 0.0;
+
+    public static final double DIV_MAX_SCORE = 0.0;
+    public static final double DIV_MIN_SCORE = 0.0;
+
     private Score[] scores = new Score[7];
     private char[] operators = new char[8];
     private ArrayList<Result> results = new ArrayList<>();
 
     // 输入幸运数字、当前分数（从上至下的顺序）和使用满分券的数量
     private int luckyNumber = 8;
-    private double[] curScores = new double[]{858,959,864,31,3.07,966,884};
+    private double[] curScores = new double[]{19,1020,22,1014,21,904,1013};
     private int numOfFullScore = 2;
+
+    public static void main(String[] args) throws ScriptException {
+
+        Calculator calculator = new Calculator();
+        calculator.printResults();
+    }
 
     public Calculator() {
         super();
@@ -45,21 +64,21 @@ public class Calculator {
             double curScore = curScores[j];
             this.scores[i] = new Score();
             this.scores[i].setCurScore(curScore);
-            if (curScore <= 1000 && curScore >= 523) { // 加法
-                this.scores[i].setMaxScore(1000.0);
-                this.scores[i].setMinScore(523.0);
+            if (curScore <= ADD_MAX_SCORE && curScore >= ADD_MIN_SCORE) { // 加法
+                this.scores[i].setMaxScore(ADD_MAX_SCORE);
+                this.scores[i].setMinScore(ADD_MIN_SCORE);
                 this.operators[i] = '+';
-            } else if (curScore <= 4 && curScore >= 2.6) { // 乘法
-                this.scores[i].setMaxScore(4.0);
-                this.scores[i].setMinScore(2.6);
+            } else if (curScore <= MUL_MAX_SCORE && curScore >= MUL_MIN_SCORE) { // 乘法
+                this.scores[i].setMaxScore(MUL_MAX_SCORE);
+                this.scores[i].setMinScore(MUL_MIN_SCORE);
                 this.operators[i] = '*';
-            } else if (curScore <= 39 && curScore >= 20) { // 减法
-                this.scores[i].setMaxScore(20);
-                this.scores[i].setMinScore(39);
+            } else if (curScore <= MIN_MIN_SCORE && curScore >= MIN_MAX_SCORE) { // 减法
+                this.scores[i].setMaxScore(MIN_MAX_SCORE);
+                this.scores[i].setMinScore(MIN_MIN_SCORE);
                 this.operators[i] = '-';
-            } else if (curScore <= 1.81 && curScore >= 1.4) {
-                this.scores[i].setMaxScore(1.4);
-                this.scores[i].setMinScore(1.81);
+            } else if (curScore <= DIV_MIN_SCORE && curScore >= DIV_MAX_SCORE) {
+                this.scores[i].setMaxScore(DIV_MAX_SCORE);
+                this.scores[i].setMinScore(DIV_MIN_SCORE);
                 this.operators[i] = '/';
             }
         }

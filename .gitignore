@@ -1,0 +1,10 @@
+## File-based project format:
+*.iws
+*.iml
+*.ipr
+
+# IntelliJ
+.idea/
+/out/
+
+.gitignore

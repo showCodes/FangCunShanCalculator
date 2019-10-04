@@ -17,17 +17,17 @@ public class Calculator {
     public static final double MUL_MAX_SCORE = 0.0;
     public static final double MUL_MIN_SCORE = 0.0;
 
-    public static final double DIV_MAX_SCORE = 0.0;
-    public static final double DIV_MIN_SCORE = 0.0;
+    public static final double DIV_MAX_SCORE = 1.4;
+    public static final double DIV_MIN_SCORE = 1.49;
 
     private Score[] scores = new Score[7];
     private char[] operators = new char[8];
     private ArrayList<Result> results = new ArrayList<>();
 
     // 输入幸运数字、当前分数（从上至下的顺序）和使用满分券的数量
-    private int luckyNumber = 8;
-    private double[] curScores = new double[]{19,1020,22,1014,21,904,1013};
-    private int numOfFullScore = 2;
+    private int luckyNumber = 7;
+    private double[] curScores = new double[]{1050,1.48,22,891,1.47,1013,1019};
+    private int numOfFullScore = 1;
 
     public static void main(String[] args) throws ScriptException {
 

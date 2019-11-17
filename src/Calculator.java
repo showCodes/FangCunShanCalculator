@@ -4,29 +4,35 @@ import javax.script.ScriptException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
+import java.lang.Math;
 
+/**
+ * @author lizhulin
+ */
 public class Calculator {
 
     // 更新分数
-    public static final double ADD_MAX_SCORE = 1500.0;
-    public static final double ADD_MIN_SCORE = 871.0;
+    private static final double ADD_MAX_SCORE = 1500.0;
+    private static final double ADD_MIN_SCORE = 927.0;
 
-    public static final double MIN_MAX_SCORE = 10;
-    public static final double MIN_MIN_SCORE = 24;
+    private static final double MIN_MAX_SCORE = 10;
+    private static final double MIN_MIN_SCORE = 22;
 
-    public static final double MUL_MAX_SCORE = 0.0;
-    public static final double MUL_MIN_SCORE = 0.0;
+    private static final double MUL_MAX_SCORE = 4.0;
+    private static final double MUL_MIN_SCORE = 3.78;
 
-    public static final double DIV_MAX_SCORE = 1.4;
-    public static final double DIV_MIN_SCORE = 1.49;
+    private static final double DIV_MAX_SCORE = 1.4;
+    private static final double DIV_MIN_SCORE = 1.46;
 
     private Score[] scores = new Score[7];
     private char[] operators = new char[8];
     private ArrayList<Result> results = new ArrayList<>();
 
-    // 输入幸运数字、当前分数（从上至下的顺序）和使用满分券的数量
-    private int luckyNumber = 7;
-    private double[] curScores = new double[]{1050,1.48,22,891,1.47,1013,1019};
+    /**
+     * 输入幸运数字、当前分数（从上至下的顺序）和使用满分券的数量
+     */
+    private int luckyNumber = 6;
+    private double[] curScores = new double[]{19,19,4,958,4,969,945};
     private int numOfFullScore = 1;
 
     public static void main(String[] args) throws ScriptException {

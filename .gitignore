@@ -6,5 +6,6 @@
 # IntelliJ
 .idea/
 /out/
+*/target/
 
 .gitignore
